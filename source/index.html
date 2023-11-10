@@ -2,11 +2,192 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
-
+    <header class="page-header">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <div class="main-nav__container">
+          <a href="#">
+            <svg class="main-nav__logo" width="86" height="35">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__main-list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="main-nav__main-list site-list">
+            <li class="site-list__item search-item">
+              <a class="site-list__link" href="#">
+                <svg class="site-list__search" width="18" height="18">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+                <span>Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link search-item" href="#">
+                <svg class="site-list__search" width="21" height="18">
+                  <use xlink:href="img/sprite.svg#basket"></use>
+                </svg>
+                <span>Корзина: пока пуста</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="main-nav__main-list main-nav__proposal">
+            <li class="main-nav__main-item">
+              <a class="main-nav__main-link" href="#">Новые поступления</a>
+            </li>
+            <li class="main-nav__main-item">
+              <a class="main-nav__main-link" href="#">Распродажа</a>
+            </li>
+            <li class="main-nav__main-item">Бесплатная доставка по России</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="main-header">
+        <h1 class="main-header__title">Милые штуки ручной <br class="main-header__title-transfer">работы для дома</br></h1>
+        <ul class="main-header__list">
+          <li class="main-header__item">
+            <p class="main-header__text-Items">Предметы интерьера</p>
+          </li>
+          <li class="main-header__item-color">
+            <p class="main-header__text">Детские игрушки</p>
+          </li>
+        </ul>
+      </section>
+      <section class="featured">
+        <div class="featured__container">
+          <h2 class="featured__title">Вязаные корзинки</h2>
+          <p class="featured__text-color">Товары Недели</p>
+          <p class="featured__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах</p>
+          <dl>
+            <div class="featured__container-item">
+              <dt>Цвет</dt>
+              <dd>тиффани/серый</dd>
+            </div>
+            <div class="featured__container-item">
+              <dt>Диаметр:</dt>
+              <dd>25 см</dd>
+            </div>
+            <div class="featured__container-item">
+              <dt>Высота:</dt>
+              <dd>15 см</dd>
+            </div>
+          </dl>
+          <picture>
+            <img src="img/jpg/triple-set-mobile-1.jpg" srcset="img/jpg/triple-set-mobile-1@2x.png 2x" width="260" height="315" alt="Вязфные шарфики.">
+          </picture>
+          <p class="featured__summa">Цена: 990 руб.</p>
+          <button class="featured__button" type="button">Заказать</button>
+        </div>
+        <svg class="featured__zigzag">
+          <use xlink:href="img/sprite.svg#zigzag"></use>
+        </svg>
+      </section>
+      <section class="about">
+        <div class="about__container">
+          <h2 class="about__title">Коротко о нас:</h2>
+          <ul class="about__list">
+            <li class="about__item clean-materials">Экологически чистые материалы</li>
+            <li class="about__item scandinavian-style">Скандинавский стиль по российской цене</li>
+            <li class="about__item increases-likes">Увеличивает лайки на фотографиях</li>
+            <li class="about__item linked-manually">Связано вручную <br class="about__linked-manually">с любовью и умилением</li>
+            <li class="about__item domestic-manufacturer">Поддержка отечественного производителя</li>
+            <li class="about__item gift-wrapped">Поставляется <br class="about__gift-wrapped">в подарочной упаковке</li>
+          </ul>
+          <article class="about__slider">
+            <h3 class="about__slider-title">Отзывы</h3>
+            <p class="about__slider-text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как <br class="about__slider-text-transfer"> у популярных инстамамочек. <br class="about__slider-text-transfer">В отчаянии, я накупила аксессуаров и игрушек в Мишке,<br class="about__slider-text-transfer"> и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <p class="about__slider-text-name">Анастасия Красильникова</p>
+            <a class="about__slider-link-email" href="#">@misssssiskras</a>
+            <div class="about__container-button">
+              <button class="about__slider-button" type="button">
+                <svg width="50" height="26">
+                  <use xlink:href="img/sprite.svg#arrow-left"></use>
+                </svg>
+              </button>
+              <button class="about__slider-button" type="button">
+                <svg width="50" height="26">
+                  <use xlink:href="img/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+            </div>
+            <a class="about__slider-link-button" href="#">Написать</a>
+          </article>
+        </div>
+        <svg class="about__slider-zigzag featured__zigzag">
+          <use xlink:href="img/sprite.svg#zigzag"></use>
+        </svg>
+      </section>
+      <section class="contacts">
+        <div class="contacts__container">
+          <h2 class="contacts__title">Контакты</h2>
+          <address class="contacts__container-email">
+            <p class="contacts__email-text">e-mail:</p> 
+            <a class="contacts__email-link" href="#">info@mimimishkashop.ru</a>
+          </address>
+          <div class="contacts__container-text">
+            <p class="contacts__text">адрес:</p>
+            <p class="contacts__text-adres">г. Санкт-Петербург <br class="contacts__text-transfer">ул. Большая Конюшенная д. 19/8, офис 101</p>
+          </div>
+        </div>
+        <div class="contacts__container-map">
+          <picture>
+            <img src="img/jpg/map-mobile@1x-1.jpg" srcset="img/jpg/map-mobile@1x-1@2x.jpg 2x" width="320" height="454" alt="Вязфные шарфики.">
+          </picture>
+          <svg class="contacts__map" width="21" height="18">
+            <use xlink:href="img/sprite.svg#map"></use>
+          </svg>
+        </div>
+        <a class="contacts__link-button" href="#">НАпишите нам</a>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <ul class="page-footer__list">
+        <li>
+          <a class="page-footer__link" href="#">
+            <svg class="" width="28" height="23">
+              <use xlink:href="img/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="page-footer__link" href="#">
+            <svg class="" width="28" height="23">
+              <use xlink:href="img/sprite.svg#youtube"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="page-footer__link" href="#">
+            <svg class="" width="28" height="23">
+              <use xlink:href="img/sprite.svg#telegram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="page-footer__container-logo">
+        <p class="page-footer__text">Разработано</p>
+        <svg class="page-footer__logo" width="27" height="35">
+          <use xlink:href="img/sprite.svg#logo-html"></use>
+        </svg>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
   </body>
 </html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <div class="main-nav__container">
+          <a class="main-nav__title-logo" href="index.html">
+            <svg class="main-nav__logo" width="86" height="35">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__main-list site-list">
+            <li class="site-list__item">
+              <a class="site-list__title" href="#">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__title" href="form.html">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="main-nav__main-list site-list">
+            <li class="site-list__item search-item">
+              <a class="site-list__title" href="#">
+                <svg class="site-list__search" width="18" height="18">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+                <span>Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__title search-item" href="#">
+                <svg class="site-list__search" width="21" height="18">
+                  <use xlink:href="img/sprite.svg#basket"></use>
+                </svg>
+                <span>Корзина: пока пуста</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="main-nav__main-list main-nav__proposal">
+            <li class="main-nav__main-item">
+              <a class="main-nav__main-title" href="#">Новые поступления</a>
+            </li>
+            <li class="main-nav__main-item">
+              <a class="main-nav__main-title" href="#">Распродажа</a>
+            </li>
+            <li class="main-nav__main-item">Бесплатная доставка по России</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="product-cards">
+        <h1>Каталог товаров</h1>
+        <ul>
+          <li>
+            <a href="#">
+              <picture>
+                <img src="img/jpg/photo-1-mobile 1.jpg" srcset="img/jpg/photo-1-mobile 1@2x.jpg 2x" width="260" height="195" alt="Вязаный зайчик.">
+              </picture>
+            </a>
+            <h3>Зайчик-попрыгайчик</h3>
+            <p>Рост 30 см, вес 200 г</p>
+            <p>1 200 руб.</p>
+            <svg class="main-header__logo" width="20" height="19">
+              <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+          </li>
+          <li>
+            <a href="#">
+              <picture>
+                <img src="img/jpg/photo-2-mobile 1.jpg" srcset="img/jpg/photo-2-mobile 1@2x.jpg 2x" width="260" height="195" alt="Вязаный корзинка.">
+              </picture>
+            </a>
+            <h3>Корзинка для белья</h3>
+            <p>Диаметр 15 см, высота 10 см</p>
+            <p>690 руб.</p>
+            <svg class="main-header__logo" width="20" height="19">
+              <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+          </li>
+          <li>
+            <a href="#">
+              <picture>
+                <img src="img/jpg/photo-3-mobile 1.jpg" srcset="img/jpg/photo-3-mobile 1.jpg 2x" width="260" height="195" alt="Вязаная ольшая корзинка.">
+              </picture>
+            </a>
+            <h3>Большая корзинка для игрушек</h3>
+            <p>Диаметр 30 см, высота 30 см</p>
+            <p>1 500 руб.</p>
+            <svg class="main-header__logo" width="20" height="19">
+              <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+          </li>
+        </ul>
+      </section>
+      <section class="video">
+        <h2 class="visually-hidden">Видео обзор товара</h2>
+        <h3>Процесс производства</h3>
+        <div>
+          <picture>
+            <img src="img/jpg/video-mobile 1.jpg" srcset="img/jpg/video-mobile 1@2x.jpg 2x" width="260" height="150" alt="Видео обзор.">
+          </picture>
+          <a href="#">
+            <svg class="main-header__logo" width="101" height="77">
+              <use xlink:href="img/sprite.svg#play"></use>
+            </svg>
+          </a>
+        </div>
+        <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <button type="button">СДелать заказ</button>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <ul class="page-footer__list">
+        <li>
+          <a class="page-footer__link" href="#">
+            <svg class="" width="28" height="23">
+              <use xlink:href="img/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="page-footer__link" href="#">
+            <svg class="" width="28" height="23">
+              <use xlink:href="img/sprite.svg#youtube"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="page-footer__link" href="#">
+            <svg class="" width="28" height="23">
+              <use xlink:href="img/sprite.svg#telegram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="page-footer__container-logo">
+        <p class="page-footer__text">Разработано</p>
+        <svg class="page-footer__logo" width="27" height="35">
+          <use xlink:href="img/sprite.svg#logo-html"></use>
+        </svg>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>
