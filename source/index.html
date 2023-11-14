@@ -11,6 +11,12 @@
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__container">
           <a href="#">
+            <svg class="main-nav__logo-desktop" width="149" height="72">
+              <use xlink:href="img/sprite.svg#logo-desktop"></use>
+            </svg>
+            <svg class="main-nav__logo-tablet" width="113" height="46">
+              <use xlink:href="img/sprite.svg#logo-tablet"></use>
+            </svg>
             <svg class="main-nav__logo" width="86" height="35">
               <use xlink:href="img/sprite.svg#logo"></use>
             </svg>
@@ -20,40 +26,40 @@
           </button>
         </div>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__main-list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+          <ul class="main-nav__list-catalog site-list">
+            <li class="site-list__item site-list--item-catalog">
+              <a class="site-list__link site-list__catalog" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
-          <ul class="main-nav__main-list site-list">
-            <li class="site-list__item search-item">
-              <a class="site-list__link" href="#">
-                <svg class="site-list__search" width="18" height="18">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item search-item site-list--item">
+              <a class="site-list__link site-list--search" href="#">
+                <svg class="site-list__search site-list--search-images" width="18" height="18">
                   <use xlink:href="img/sprite.svg#search"></use>
                 </svg>
-                <span>Поиск по сайту</span>
+                <span class="site-list__search-text">Поиск по сайту</span>
               </a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link search-item" href="#">
-                <svg class="site-list__search" width="21" height="18">
+              <a class="site-list__link search--item" href="#">
+                <svg class="site-list__search search--images" width="21" height="18">
                   <use xlink:href="img/sprite.svg#basket"></use>
                 </svg>
                 <span>Корзина: пока пуста</span>
               </a>
             </li>
           </ul>
-          <ul class="main-nav__main-list main-nav__proposal">
-            <li class="main-nav__main-item">
-              <a class="main-nav__main-link" href="#">Новые поступления</a>
+          <ul class="main-nav__proposal">
+            <li class="main-nav__item-proposal">
+              <a class="main-nav__link-proposal" href="#">Новые поступления</a>
             </li>
-            <li class="main-nav__main-item">
-              <a class="main-nav__main-link" href="#">Распродажа</a>
+            <li class="main-nav__item-proposal">
+              <a class="main-nav__link-proposal" href="#">Распродажа</a>
             </li>
-            <li class="main-nav__main-item">Бесплатная доставка по России</li>
+            <li class="main-nav__proposal-text">Бесплатная доставка по России</li>
           </ul>
         </div>
       </nav>
@@ -93,7 +99,7 @@
             <img src="img/jpg/triple-set-mobile-1.jpg" srcset="img/jpg/triple-set-mobile-1@2x.png 2x" width="260" height="315" alt="Вязфные шарфики.">
           </picture>
           <p class="featured__summa">Цена: 990 руб.</p>
-          <button class="featured__button" type="button">Заказать</button>
+          <button class="featured__button" type="button" id="myBtn">Заказать</button>
         </div>
         <svg class="featured__zigzag">
           <use xlink:href="img/sprite.svg#zigzag"></use>
@@ -154,7 +160,7 @@
             <use xlink:href="img/sprite.svg#map"></use>
           </svg>
         </div>
-        <a class="contacts__link-button" href="#">НАпишите нам</a>
+        <a class="contacts__link-button" href="#">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
@@ -188,6 +194,27 @@
         </svg>
       </div>
     </footer>
+    <div class="overlay" id="myModal">
+      <div class="modal">
+        <div class="modal__container">
+          <h2 class="modal__title">Добавить в корзину</h2>
+          <p class="modal__text">Выберите размер:</p>
+          <ul class="modal__list">
+            <li>
+              <button class="modal__button modal--active" type="button">s</button>
+            </li>
+            <li>
+              <button class="modal__button" type="button">m</button>
+            </li>
+            <li>
+              <button class="modal__button" type="button">l</button>
+            </li>
+          </ul>
+          <button class="modal__button-add" type="button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/modal.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
