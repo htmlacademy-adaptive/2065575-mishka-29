@@ -9,9 +9,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    height: 758px;
     background-image: url('../img/jpg/hero-desktop-2.jpg');
-    background-size: 100% 100%;
   
     @media (min-resolution: 2dppx) {
       background-image: url('../img/jpg/hero-desktop-2@2x.jpg');
@@ -30,7 +28,7 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    padding-top: 110.5px;
+    padding-top: 154px;
     font-size: 43px;
     line-height: 50px;
   }
@@ -38,40 +36,66 @@
 
 .main-header__list {
   margin-top: 120px;
-  margin-bottom: 31px;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
   color: #FFFFFF;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    width: 100%;
+    display: grid;
     margin-top: 372px;
+    padding: 0 50px;
+    grid-template-columns: 1fr 1fr;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
 .main-header__item {
+  display: flex;
+  min-height: 103px;
+  align-items: center;
   background-color: #63D1BB;
+  cursor: pointer;
+
+  &:hover {
+    min-height: 108px;
+    margin-top: -5px;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 119px;
+
+    &:hover {
+      min-height: 124px;
+    }
+  }
 }
 
-.main-header__item-color {
+.main-header--color {
   background-color: #56C3B2;
 }
 
-.main-header__text-Items {
-  min-width: 160px;
-  max-width: 440px;
-  margin: 0;
-  margin-right: 36px;
-  padding: 0;
+.main-header__text {
+  width: 100%;
   padding-left: 30px;
   padding-top: 24px;
   padding-bottom: 31px;
-  padding-right: 90px;
-  background-image: url('../img/png/interior.svg.png');
+
+  @media (min-width: @tablet-width) {
+    padding-left: 36px;
+    padding-top: 25px;
+    padding-bottom: 34px;
+    padding-right: 100px;
+  }
+}
+
+.main-header--interior {
+  padding-right: 105.5px;
+  background-image: url(../img/png/interior.svg.png);
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: center;
+  background-position-x: 90%;
 
   @media (min-resolution: 2dppx) {
     background-image: url('../img/png/interior.svg@2x.png');
@@ -79,22 +103,20 @@
   }
 }
 
-.main-header__text {
-  min-width: 160px;
-  max-width: 440px;
-  margin: 0;
-  margin-right: 27px;
-  padding: 0;
-  padding-left: 30px;
-  padding-top: 24px;
-  padding-bottom: 31px;
-  padding-right: 106px;
+.main-header--toys {
+  padding-right: 143.5px;
   background-image: url('../img/png/toy-svg.png');
   background-repeat: no-repeat;
   background-position: center right;
+  background-position-x: 90%;
 
   @media (min-resolution: 2dppx) {
     background-image: url('../img/png/toy-svg@2x.png');
     background-size: auto 60px;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 146px;
+  }
 }
+
