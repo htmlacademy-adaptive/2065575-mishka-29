@@ -2,7 +2,7 @@
   background-image: url('../img/jpg/hero-mobile@2x-1.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
-  background-color: rgb(240, 243, 245);
+  background-color: #f9f9f9;
 
   @media (min-resolution: 2dppx) {
     background-image: url('../img/jpg/hero-mobile@2x-1@2x.jpg');
@@ -15,12 +15,22 @@
       background-image: url('../img/jpg/hero-desktop-2@2x.jpg');
     }
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1150px;
+    margin: 0 auto;
+    background-image: url('../img/jpg/hero-desktop-1.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/jpg/hero-desktop-1@2x.jpg');
+    }
+  }
 }
 
 .main-header__title {
   margin: 0;
   padding: 0 15px;
-  padding-top: 73px;
+  padding-top: 71px;
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
@@ -31,6 +41,12 @@
     padding-top: 154px;
     font-size: 43px;
     line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 156px;
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
@@ -49,6 +65,12 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 355px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .main-header__item {
@@ -64,11 +86,15 @@
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 119px;
+    min-height: 120px;
 
     &:hover {
       min-height: 124px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 117px;
   }
 }
 
@@ -85,7 +111,7 @@
   @media (min-width: @tablet-width) {
     padding-left: 36px;
     padding-top: 25px;
-    padding-bottom: 34px;
+    padding-bottom: 36px;
     padding-right: 100px;
   }
 }
@@ -95,11 +121,19 @@
   background-image: url(../img/png/interior.svg.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-position-x: 90%;
+  background-position-x: 87%;
 
   @media (min-resolution: 2dppx) {
     background-image: url('../img/png/interior.svg@2x.png');
     background-size: auto 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    padding-right: 265px;
+    padding-left: 37px;
+    padding-bottom: 7px;
+    background-position-x: 92.3%;
   }
 }
 
@@ -117,6 +151,15 @@
 
   @media (min-width: @tablet-width) {
     padding-right: 146px;
+    background-position-x: 88%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    padding-right: 305px;
+    padding-left: 35px;
+    padding-bottom: 7px;
+    background-position-x: 93%;
   }
 }
 

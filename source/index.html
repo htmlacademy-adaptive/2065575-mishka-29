@@ -28,10 +28,10 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list-catalog site-list">
             <li class="site-list__item site-list--item-catalog">
-              <a class="site-list__link site-list__catalog" href="catalog.html">Каталог товаров</a>
+              <a class="site-list__link site-list--catalog" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Вязание на заказ</a>
+              <a class="site-list__link site-list--catalog" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
           <ul class="main-nav__list site-list">
@@ -102,6 +102,7 @@
           </div>
           <div class="featured__images">
             <picture>
+              <source media="(min-width: 1150px)" srcset="img/jpg/triple-set-desktop-1.jpg 1x, img/jpg/triple-set-desktop-1@2x.jpg 2x" width="525" height="636">
               <source media="(min-width: 768px)" srcset="img/jpg/triple-set-tablet 1.jpg 1x, img/jpg/triple-set-tablet 1@2x.jpg 2x" width="334" height="404">
               <img src="img/jpg/triple-set-mobile-1.jpg" srcset="img/jpg/triple-set-mobile-1@2x.png 2x" width="260" height="315" alt="Вязфные шарфики.">
             </picture>
@@ -163,18 +164,21 @@
         <div class="contacts__decor" aria-hidden="true"></div>
         <div class="contacts__container">
           <h2 class="contacts__title">Контакты</h2>
-          <address class="contacts__container-email">
-            <p class="contacts__email-text">e-mail:</p> 
-            <a class="contacts__email-link" href="#">info@mimimishkashop.ru</a>
-          </address>
-          <div class="contacts__container-text">
-            <p class="contacts__text">адрес:</p>
-            <p class="contacts__text-adres">г. Санкт-Петербург <br class="contacts__text-transfer">ул. Большая Конюшенная д. 19/8, офис 101</p>
+          <div class="contacts__container-address">
+            <address class="contacts__container-email">
+              <p class="contacts__email-text">e-mail:</p> 
+              <a class="contacts__email-link" href="#">info@mimimishkashop.ru</a>
+            </address>
+            <div class="contacts__container-text">
+              <p class="contacts__text">адрес:</p>
+              <p class="contacts__text-adres">г. Санкт-Петербург <br class="contacts__text-transfer">ул. Большая Конюшенная д. 19/8, офис 101</p>
+            </div>
           </div>
         </div>
         <div class="contacts__container-map">
           <picture>
-            <img src="img/jpg/map-mobile@1x-1.jpg" srcset="img/jpg/map-mobile@1x-1@2x.jpg 2x" width="320" height="454" alt="Вязфные шарфики.">
+            <source media="(min-width: 768px)" srcset="img/jpg/map-tablet@1x-1.jpg 1x, img/jpg/map-tablet@1x-1@2x.jpg 2x" width="768" height="457">
+            <img src="img/jpg/map-mobile@1x-1.jpg" srcset="img/jpg/map-mobile@1x-1@2x.jpg 2x" width="320" height="454" alt="Карта.">
           </picture>
           <svg class="contacts__map" width="21" height="18">
             <use xlink:href="img/sprite.svg#map"></use>
@@ -184,34 +188,41 @@
       </section>
     </main>
     <footer class="page-footer">
-      <ul class="page-footer__list">
-        <li>
-          <a class="page-footer__link" href="#">
-            <svg class="" width="28" height="23">
-              <use xlink:href="img/sprite.svg#vk"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a class="page-footer__link" href="#">
-            <svg class="" width="28" height="23">
-              <use xlink:href="img/sprite.svg#youtube"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a class="page-footer__link" href="#">
-            <svg class="" width="28" height="23">
-              <use xlink:href="img/sprite.svg#telegram"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <div class="page-footer__container-logo">
-        <p class="page-footer__text">Разработано</p>
-        <svg class="page-footer__logo" width="27" height="35">
-          <use xlink:href="img/sprite.svg#logo-html"></use>
-        </svg>
+      <div class="page-footer__container">
+        <a class="page-footer__logo-footer" href="#">
+          <svg class="" width="102" height="34">
+            <use xlink:href="img/sprite.svg#logo-footer"></use>
+          </svg>
+        </a>
+        <ul class="page-footer__list">
+          <li>
+            <a class="page-footer__link" href="#">
+              <svg class="" width="28" height="23">
+                <use xlink:href="img/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="page-footer__link" href="#">
+              <svg class="" width="28" height="23">
+                <use xlink:href="img/sprite.svg#youtube"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="page-footer__link" href="#">
+              <svg class="" width="28" height="23">
+                <use xlink:href="img/sprite.svg#telegram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__container-logo">
+          <p class="page-footer__text">Разработано</p>
+          <svg class="page-footer__logo" width="27" height="35">
+            <use xlink:href="img/sprite.svg#logo-html"></use>
+          </svg>
+        </div>
       </div>
     </footer>
     <div class="overlay overlay--modal" id="myModal">
