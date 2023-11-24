@@ -6,8 +6,8 @@
     max-width: 1150px;
     margin: 0 auto;
     padding-bottom: 105px;
-    grid-template-columns: 1fr 527px;
-    gap: 0 80px;
+    grid-template-columns: 1fr 576px;
+    gap: 0 27px;
   }
 }
 
@@ -49,9 +49,9 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    margin-top: 133px;
+    margin-top: 156px;
     padding: 0;
-    padding-left: 113px;
+    padding-left: 59px;
   }
 }
 
@@ -76,10 +76,13 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding: 17px 0;
+    padding-left: 58px;
+    padding-bottom: 35px;
     font-size: 53px;
     line-height: 57px;
-    background-position-x: left;
-    text-align: right;
+    background-position-x: 54px;
+    text-align: center;
   }
 }
 
@@ -113,7 +116,7 @@
 
 @media (min-width: @desktop-width) {
   .contacts__container-text {
-    margin-top: 34.5px;
+    margin-top: 28.5px;
   }
 }
 
@@ -126,6 +129,10 @@
   font-size: 14px;
   line-height: 30px;
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .contacts__text-adres {
@@ -134,10 +141,12 @@
   @media (min-width: @tablet-width) {
     font-size: 17px;
     padding-right: 25px;
+    margin-left: 25px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 30px;
+    margin-left: 26px;
+    padding-right: 30px;
   }
 }
 
@@ -155,6 +164,11 @@
   @media (min-width: @tablet-width) {
     height: 30px;
     font-size: 17px;
+    margin-left: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 24px;
   }
 }
 
@@ -171,7 +185,7 @@
   background-color: rgb(208, 217, 224);
 
   @media (min-width: @desktop-width) {
-    margin-top: 71px;
+    margin-top: 93px;
     margin-right: 49px;
     grid-column-start: 2;
     grid-row-start: 1;
@@ -189,6 +203,11 @@
   @media (min-width: @tablet-width) {
     bottom: 48%;
     left: 47%;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 46%;
+    left: 45.5%;
   }
 }
 
@@ -219,8 +238,10 @@
   @media (min-width: @desktop-width) {
     margin: 0;
     padding: 0;
-    padding: 16px 0;
-    align-self: flex-end;;
-    justify-self: flex-end;
+    margin-left: 133px;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    align-self: flex-end;
+    justify-self: center;
   }
 }
