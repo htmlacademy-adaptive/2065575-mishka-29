@@ -1,7 +1,6 @@
-@media (min-width: @desktop-width) {
+@media (min-width: @tablet-width) {
   .featured {
-    max-width: 1150px;
-    margin: 0 auto;
+    position: relative;
   }
 }
 
@@ -10,6 +9,8 @@
   padding: 0 30px;
 
   @media (min-width: @tablet-width) {
+    max-width: 1050px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 50px;
@@ -162,7 +163,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 50px;
+    margin-top: 52px;
   }
 }
 
@@ -221,7 +222,7 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    margin-top: 116px;
+    margin-top: 114px;
     margin-right: 13px;
     grid-row-start: 3;
     grid-column: 2 / 3;
@@ -242,6 +243,12 @@
   text-transform: uppercase;
   background-color: transparent;
   border: solid 2px #444444;
+  z-index: 10;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
 
   
   @media (min-width: @tablet-width) {

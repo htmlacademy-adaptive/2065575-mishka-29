@@ -1,6 +1,7 @@
 .main-header {
   background-image: url('../img/jpg/hero-mobile@2x-1.jpg');
   background-repeat: no-repeat;
+  background-position-y: -19px;
   background-size: 100%;
   background-color: #f9f9f9;
 
@@ -9,6 +10,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    background-position-y: -2px;
     background-image: url('../img/jpg/hero-desktop-2.jpg');
   
     @media (min-resolution: 2dppx) {
@@ -17,7 +19,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 1150px;
     margin: 0 auto;
     background-image: url('../img/jpg/hero-desktop-1.jpg');
 
@@ -67,6 +68,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    max-width: 1050px;
+    margin: 0 auto;
     margin-top: 355px;
     font-size: 20px;
     line-height: 30px;
@@ -95,6 +98,10 @@
 
   @media (min-width: @desktop-width) {
     min-height: 117px;
+
+    &:hover {
+      min-height: 121px;
+    }
   }
 }
 

@@ -10,7 +10,7 @@
     <header class="page-header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__container">
-          <a href="index.html">
+          <a class="main-nav__container-logo" href="index.html">
             <svg class="main-nav__logo-desktop" width="149" height="72">
               <use xlink:href="img/sprite.svg#logo-desktop"></use>
             </svg>
@@ -79,7 +79,7 @@
                 <img src="img/jpg/photo-1-mobile 1.jpg" srcset="img/jpg/photo-1-mobile 1@2x.jpg 2x" width="260" height="195" alt="Вязаный зайчик.">
               </picture>
             </a>
-            <div class="product-cards__container">
+            <a href="#" class="product-cards__container">
               <div class="product-cards__container-text">
                 <h3 class="product-cards__container-title">Зайчик-попрыгайчик</h3>
                 <p class="product-cards__text">Рост 30 см, вес 200 г</p>
@@ -90,7 +90,7 @@
                   <use xlink:href="img/sprite.svg#cart"></use>
                 </svg>
               </div>
-            </div>
+            </a>
           </li>
           <li class="product-cards__item">
             <a class="product-cards__link" href="#">
@@ -100,7 +100,7 @@
                 <img src="img/jpg/photo-2-mobile 1.jpg" srcset="img/jpg/photo-2-mobile 1@2x.jpg 2x" width="260" height="195" alt="Вязаный корзинка.">
               </picture>
             </a>
-            <div class="product-cards__container">
+            <a href="#" class="product-cards__container">
               <div class="product-cards__container-text">
                 <h3 class="product-cards__container-title">Корзинка для белья</h3>
                 <p class="product-cards__text">Диаметр 15 см, высота 10 см</p>
@@ -111,7 +111,7 @@
                   <use xlink:href="img/sprite.svg#cart"></use>
                 </svg>
               </div>
-            </div>
+            </a>
           </li>
           <li class="product-cards__item">
             <a class="product-cards__link" href="#">
@@ -121,7 +121,7 @@
                 <img src="img/jpg/photo-3-mobile 1.jpg" srcset="img/jpg/photo-3-mobile 1.jpg 2x" width="260" height="195" alt="Вязаная ольшая корзинка.">
               </picture>
             </a>
-            <div class="product-cards__container">
+            <a href="#" class="product-cards__container">
               <div class="product-cards__container-text">
                 <h3 class="product-cards__container-title">Большая корзинка для игрушек</h3>
                 <p class="product-cards__text">Диаметр 30 см, высота 30 см</p>
@@ -132,7 +132,7 @@
                   <use xlink:href="img/sprite.svg#cart"></use>
                 </svg>
               </div>
-            </div>
+            </a>
           </li>
         </ul>
       </section>
@@ -147,14 +147,14 @@
               <img src="img/jpg/video-mobile 1.jpg" srcset="img/jpg/video-mobile 1@2x.jpg 2x" width="260" height="150" alt="Видео обзор.">
             </picture>
             <a class="video__images-button" href="#">
-              <svg class="main-header__logo" width="101" height="77">
+              <svg width="101" height="77">
                 <use xlink:href="img/sprite.svg#play"></use>
               </svg>
             </a>
           </div>
           <div class="video__text-button">
             <p class="video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <button class="video__button" type="button">сделать заказ</button>
+            <button class="video__button" type="button" id="myBtn">сделать заказ</button>
           </div>
         </div>
       </section>

@@ -18,7 +18,7 @@
     grid-template-columns: 1fr 367px;
     max-width: 1050px;
     margin: 0 auto;
-    margin-bottom: 105px;
+    margin-bottom: 104px;
   }
 }
 
@@ -58,8 +58,8 @@
     grid-column: 2 / 3;
     grid-row-start: 1;
     justify-self: center;
-    background-position-x: 79px;
-    background-position-y: 50px;
+    background-position-x: 78px;
+    background-position-y: 46px;
   }
 }
 
@@ -94,6 +94,10 @@
   right: 0;
   top: 23%;
   justify-content: center;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 
   @media (min-width: @tablet-width) {
     top: 42%;
@@ -134,13 +138,13 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 79px;
-    padding-top: 27.5px;
+    padding-top: 11.5px;
   }
 }
 
 .video__button {
   display: inline-block;
-  margin-top: 41px;
+  margin-top: 42px;
   margin-bottom: 33px;
   padding: 16px 18.5px;
   margin-left: 1px;
@@ -160,6 +164,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 18px 29px;
+    padding: 16px 42px;
+    margin-top: 51px;
+    margin-left: 23px;
   }
 }
