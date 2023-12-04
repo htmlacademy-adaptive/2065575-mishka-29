@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="/css/style.min.css" as="style">
+    <link rel="preload" href="/js/script.min.js" as="script">
+    <link rel="preload" href="/img/bg-header@2x.jpg" as="image">
+    <link rel="preload" href="/fonts/ptsans-narrow.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <header class="page-header">
@@ -12,10 +16,10 @@
         <div class="main-nav__container">
           <a class="main-nav__container-logo" href="#">
             <svg class="main-nav__logo-desktop" width="149" height="72">
-              <use xlink:href="img/sprite.svg#logo-desktop"></use>
+              <use xlink:href="img/sprite.svg#mishka-logo-desktop"></use>
             </svg>
             <svg class="main-nav__logo-tablet" width="113" height="46">
-              <use xlink:href="img/sprite.svg#logo-tablet"></use>
+              <use xlink:href="img/sprite.svg#mishka-logo-tablet"></use>
             </svg>
             <svg class="main-nav__logo" width="86" height="35">
               <use xlink:href="img/sprite.svg#mishka-logo-mobile"></use>
@@ -140,7 +144,7 @@
             </li>
           </ul>
         </div>
-        <article class="about__slider">
+        <div class="about__slider">
           <h3 class="about__slider-title">Отзывы</h3>
           <p class="about__slider-text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как <br class="about__slider-text-transfer"> у популярных инстамамочек. <br class="about__slider-text-transfer">В отчаянии, я накупила аксессуаров и игрушек в Мишке,<br class="about__slider-text-transfer"> и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
           <div class="about__container-text-name">
@@ -150,17 +154,17 @@
           <div class="about__container-button">
             <button class="about__slider-button" type="button">
               <svg width="50" height="26">
-                <use xlink:href="img/sprite.svg#arrow-left"></use>
+                <use xlink:href="img/sprite.svg#huge-arrow-left"></use>
               </svg>
             </button>
             <button class="about__slider-button" type="button">
               <svg width="50" height="26">
-                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                <use xlink:href="img/sprite.svg#huge-arrow-right"></use>
               </svg>
             </button>
           </div>
           <a class="about__slider-link-button" href="#">Написать</a>
-        </article>
+        </div>
       </section>
       <section class="contacts">
         <div class="contacts__decor" aria-hidden="true"></div>
@@ -183,7 +187,7 @@
             <img src="img/jpg/map-mobile@1x-1.jpg" srcset="img/jpg/map-mobile@1x-1@2x.jpg 2x" width="320" height="454" alt="Карта.">
           </picture>
           <svg class="contacts__map" width="21" height="18">
-            <use xlink:href="img/sprite.svg#map"></use>
+            <use xlink:href="img/sprite.svg#map-pin"></use>
           </svg>
         </div>
         <a class="contacts__link-button" href="#">Напишите нам</a>
@@ -222,31 +226,43 @@
         <div class="page-footer__container-logo">
           <p class="page-footer__text">Разработано</p>
           <svg class="page-footer__logo" width="27" height="35">
-            <use xlink:href="img/sprite.svg#logo-html"></use>
+            <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>
         </div>
       </div>
     </footer>
-    <div class="overlay overlay--modal" id="myModal">
-      <div class="modal">
+    <form class="overlay overlay--modal" id="myModal" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset class="modal">
         <div class="modal__container">
           <h2 class="modal__title">Добавить в корзину</h2>
           <p class="modal__text">Выберите размер:</p>
           <ul class="modal__list">
             <li>
-              <button class="modal__button modal--active" type="button">s</button>
+              <label>
+                <input class="form__radio-input visually-hidden" type="radio" name="product-group" value="care-products" checked>
+                <span class="modal--active"></span>
+                <span class="modal__button">s</span>
+              </label>
             </li>
             <li>
-              <button class="modal__button" type="button">m</button>
+              <label>
+                <input class="form__radio-input visually-hidden" type="radio" name="product-group" value="care-products">
+                <span class="modal--active"></span>
+                <span class="modal__button">m</span>
+              </label>
             </li>
             <li>
-              <button class="modal__button" type="button">l</button>
+              <label>
+                <input class="form__radio-input visually-hidden" type="radio" name="product-group" value="care-products">
+                <span class="modal--active"></span>
+                <span class="modal__button">l</span>
+              </label>
             </li>
           </ul>
-          <button class="modal__button-add" type="button">Добавить</button>
+          <button class="modal__button-add" type="submit">Добавить</button>
         </div>
-      </div>
-    </div>
+      </fieldset>
+    </form>
     <script src="js/modal.js"></script>
     <script src="js/app.js"></script>
   </body>

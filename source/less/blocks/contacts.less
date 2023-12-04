@@ -18,7 +18,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url(../img/svg/zigzag-line-desktop.svg.svg);
+  background-image: url(../img/svg/zigzag-line-desktop.svg);
   background-repeat: no-repeat;
   background-position-y: top;
   background-position-x: center;
@@ -26,13 +26,13 @@
   z-index: 10;
 
   @media (min-width: @tablet-width) {
-    background-image: url(../img/svg/zigzag-line-desktop.svg-1.svg);
+    background-image: url(../img/svg/zigzag-line-desktop-1.svg);
   }
 
   @media (min-width: @desktop-width) {
     margin: 0 50px;
     width: 1050px;
-    background-image: url(../img/svg/zigzag-line-desktop.svg-3.svg);
+    background-image: url(../img/svg/zigzag-line-desktop-3.svg);
   }
 }
 
@@ -70,7 +70,7 @@
     padding: 22px 0;
     font-size: 43px;
     line-height: 50px;
-    background-image: url(../img/svg/flag.svg.svg);
+    background-image: url(../img/svg/flag.svg);
     background-repeat: no-repeat;
     background-position-x: right;
   }
@@ -232,6 +232,12 @@
   text-decoration: none;
   text-transform: uppercase;
   border: solid 2px #444444;
+  z-index: 10;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
 
   @media (min-width: @tablet-width) {
     width: 226px;

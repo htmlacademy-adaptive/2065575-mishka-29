@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="/css/style.min.css" as="style">
+    <link rel="preload" href="/js/script.min.js" as="script">
+    <link rel="preload" href="/img/bg-header@2x.jpg" as="image">
+    <link rel="preload" href="/fonts/ptsans-narrow.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <header class="page-header">
@@ -12,13 +16,13 @@
         <div class="main-nav__container">
           <a class="main-nav__container-logo" href="index.html">
             <svg class="main-nav__logo-desktop" width="149" height="72">
-              <use xlink:href="img/sprite.svg#logo-desktop"></use>
+              <use xlink:href="img/sprite.svg#mishka-logo-desktop"></use>
             </svg>
             <svg class="main-nav__logo-tablet" width="113" height="46">
-              <use xlink:href="img/sprite.svg#logo-tablet"></use>
+              <use xlink:href="img/sprite.svg#mishka-logo-tablet"></use>
             </svg>
             <svg class="main-nav__logo" width="86" height="35">
-              <use xlink:href="img/sprite.svg#logo"></use>
+              <use xlink:href="img/sprite.svg#mishka-logo-mobile"></use>
             </svg>
           </a>
           <button class="main-nav__toggle" type="button">
@@ -80,7 +84,7 @@
               <picture>
                 <source media="(min-width: 1150px)" srcset="img/jpg/photo-1-desktop.jpg 1x, img/jpg/photo-1-desktop@2x.jpg 2x" width="316" height="462">
                 <source media="(min-width: 768px)" srcset="img/jpg/photo-1-tablet-1.jpg 1x, img/jpg/photo-1-tablet-1@2x.jpg 2x" width="334" height="334">
-                <img src="img/jpg/photo-1-mobile 1.jpg" srcset="img/jpg/photo-1-mobile 1@2x.jpg 2x" width="260" height="195" alt="Вязаный зайчик.">
+                <img src="img/jpg/photo-1-mobile1.jpg" srcset="img/jpg/photo-1-mobile1@2x.jpg 2x" width="260" height="195" alt="Вязаный зайчик.">
               </picture>
             </a>
             <div class="product-cards__container-text">
@@ -105,7 +109,7 @@
               <picture>
                 <source media="(min-width: 1150px)" srcset="img/jpg/photo-2-desktop.jpg 1x, img/jpg/photo-2-desktop@2x.jpg 2x" width="316" height="462">
                 <source media="(min-width: 768px)" srcset="img/jpg/photo-2-tablet-2.jpg 1x, img/jpg/photo-2-tablet-2@2x.jpg 2x" width="334" height="334">
-                <img src="img/jpg/photo-2-mobile 1.jpg" srcset="img/jpg/photo-2-mobile 1@2x.jpg 2x" width="260" height="195" alt="Вязаный корзинка.">
+                <img src="img/jpg/photo-2-mobile1.jpg" srcset="img/jpg/photo-2-mobile1@2x.jpg 2x" width="260" height="195" alt="Вязаный корзинка.">
               </picture>
             </a>
             <div class="product-cards__container-text">
@@ -130,7 +134,7 @@
               <picture>
                 <source media="(min-width: 1150px)" srcset="img/jpg/photo-3-desktop-1.jpg 1x, img/jpg/photo-3-desktop-1@2x.jpg 2x" width="316" height="462">
                 <source media="(min-width: 768px)" srcset="img/jpg/photo-3-tablet-1.jpg 1x, img/jpg/photo-3-tablet-1@2x.jpg 2x" width="334" height="334">
-                <img src="img/jpg/photo-3-mobile 1.jpg" srcset="img/jpg/photo-3-mobile 1.jpg 2x" width="260" height="195" alt="Вязаная ольшая корзинка.">
+                <img src="img/jpg/photo-3-mobile1.jpg" srcset="img/jpg/photo-3-mobile1.jpg 2x" width="260" height="195" alt="Вязаная ольшая корзинка.">
               </picture>
             </a>
             <div class="product-cards__container-text">
@@ -160,7 +164,7 @@
             <picture>
               <source media="(min-width: 1150px)" srcset="img/jpg/video-desktop.jpg 1x, img/jpg/video-desktop@2x.jpg 2x" width="683" height="455">
               <source media="(min-width: 768px)" srcset="img/jpg/video-tablet-1.jpg 1x, img/jpg/video-tablet-1@2x.jpg 2x" width="688" height="455">
-              <img src="img/jpg/video-mobile 1.jpg" srcset="img/jpg/video-mobile 1@2x.jpg 2x" width="260" height="150" alt="Видео обзор.">
+              <img src="img/jpg/video-mobile1.jpg" srcset="img/jpg/video-mobile1@2x.jpg 2x" width="260" height="150" alt="Видео обзор.">
             </picture>
             <a class="video__images-button" href="#">
               <svg width="101" height="77">
@@ -185,14 +189,14 @@
         <ul class="page-footer__list">
           <li>
             <a class="page-footer__link" href="#">
-              <svg class="" width="28" height="23">
-                <use xlink:href="img/sprite.svg#vk"></use>
+              <svg width="28" height="23">
+                <use xlink:href="img/sprite.svg#vkontakte"></use>
               </svg>
             </a>
           </li>
           <li>
             <a class="page-footer__link" href="#">
-              <svg class="" width="28" height="23">
+              <svg width="28" height="23">
                 <use xlink:href="img/sprite.svg#youtube"></use>
               </svg>
             </a>
@@ -208,31 +212,43 @@
         <div class="page-footer__container-logo">
           <p class="page-footer__text">Разработано</p>
           <svg class="page-footer__logo" width="27" height="35">
-            <use xlink:href="img/sprite.svg#logo-html"></use>
+            <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>
         </div>
       </div>
     </footer>
-    <div class="overlay overlay--modal" id="myModal">
-      <div class="modal">
+    <form class="overlay overlay--modal" id="myModal" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset class="modal">
         <div class="modal__container">
           <h2 class="modal__title">Добавить в корзину</h2>
           <p class="modal__text">Выберите размер:</p>
           <ul class="modal__list">
             <li>
-              <button class="modal__button modal--active" type="button">s</button>
+              <label>
+                <input class="form__radio-input visually-hidden" type="radio" name="product-group" value="care-products" checked>
+                <span class="modal--active"></span>
+                <span class="modal__button">s</span>
+              </label>
             </li>
             <li>
-              <button class="modal__button" type="button">m</button>
+              <label>
+                <input class="form__radio-input visually-hidden" type="radio" name="product-group" value="care-products">
+                <span class="modal--active"></span>
+                <span class="modal__button">m</span>
+              </label>
             </li>
             <li>
-              <button class="modal__button" type="button">l</button>
+              <label>
+                <input class="form__radio-input visually-hidden" type="radio" name="product-group" value="care-products">
+                <span class="modal--active"></span>
+                <span class="modal__button">l</span>
+              </label>
             </li>
           </ul>
-          <button class="modal__button-add" type="button">Добавить</button>
+          <button class="modal__button-add" type="submit">Добавить</button>
         </div>
-      </div>
-    </div>
+      </fieldset>
+    </form>
     <script src="js/modal.js"></script>
     <script src="js/app.js"></script>
   </body>
