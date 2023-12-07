@@ -12,6 +12,7 @@
 }
 
 .product-cards__title {
+  position: relative;
   margin: 0;
   padding: 73.5px 0;
   font-weight: 700;
@@ -28,7 +29,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 101px;
+    padding-top: 103px;
     padding-bottom: 96px;
     font-size: 53px;
     line-height: 57px;
@@ -36,12 +37,13 @@
 }
 
 @media (min-width: @tablet-width) {
-  .product-cards__decor {
+  .product-cards__title::before {
+    content: "";
     position: absolute;
     display: block;
     width: 100%;
     height: 100%;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     background-image: url(../img/svg/zigzag-fill-desktop.svg);
     background-repeat: no-repeat;
@@ -51,15 +53,19 @@
     z-index: 10;
 
     @media (min-width: @desktop-width) {
-      bottom: -20px;
+      bottom: -19px;
     }
   }
 }
 
 .product-cards__list {
+  max-width: 1050px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   padding: 30px;
   padding-top: 30px;
-  justify-content: center;
+  justify-content: flex-start;
 
   @media (min-width: @tablet-width) {
     padding: 50px;
@@ -69,11 +75,10 @@
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1150px;
     margin: 0 auto;
     padding: 0;
     padding-bottom: 57px;
-    padding-top: 128px;
+    padding-top: 126px;
     gap: 48px;
   }
 }
@@ -81,8 +86,10 @@
 .product-cards__item {
   margin-top: 29px;
   border: solid 1px #ECECEC;
-
-  &:hover {
+  cursor: pointer;
+  
+  &:hover,
+  &:focus {
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
   }
 
@@ -123,6 +130,7 @@
 
 .product-cards__container {
   width: 100%;
+  font-family: "Open Sans", sans-serif;
   text-decoration: none;
   
   @media (min-width: @tablet-width) {
@@ -155,8 +163,16 @@
   line-height: 24px;
   color: #000000;
 
+  &:active {
+    opacity: 100%;
+  }
+
   &:hover {
     opacity: 60%;
+  }
+
+  &:focus {
+    opacity: 30%;
   }
 
   @media (min-width: @tablet-width) {
@@ -230,11 +246,21 @@
 
 .product-cards__basket-images {
   padding-bottom: 3px;
+  font-family: "Open Sans", sans-serif;
   background-color: transparent;
   border: none;
 
+  &:active {
+    color: #000000;
+  }
+
   &:hover {
     color: #63D1BB;
+  }
+
+  &:focus {
+    color: #63D1BB;
+    opacity: 30%;
   }
 }
 

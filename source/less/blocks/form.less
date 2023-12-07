@@ -2,15 +2,8 @@
   text-align: center;
 }
 
-.form__container-decor {
-  z-index: -1;
-
-  @media (min-width: @tablet-width) {
-    position: relative;
-  }
-}
-
 .form__title {
+  position: relative;
   margin: 0;
   padding: 71.5px 0;
   padding-bottom: 73.5px;
@@ -28,7 +21,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 100px;
+    padding-top: 101px;
     padding-bottom: 96px;
     font-size: 53px;
     line-height: 57px;
@@ -36,12 +29,13 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form__decor {
+  .form__title::before {
+    content: "";
     position: absolute;
     display: block;
     width: 100%;
     height: 100%;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     background-image: url(../img/svg/zigzag-fill-desktop.svg);
     background-repeat: no-repeat;
@@ -51,7 +45,7 @@
     z-index: 10;
 
     @media (min-width: @desktop-width) {
-      bottom: -20px;
+      bottom: -19px;
     }
   }
 }
@@ -145,8 +139,16 @@
   border: solid 2px #444444;
   cursor: pointer;
 
+  &:active {
+    border: solid 2px #444444;
+  }
+
   &:hover {
     border: solid 2px #62D1BA;
+  }
+
+  &:focus {
+    border: solid 2px #000000;
   }
 
   @media (min-width: @tablet-width) {
@@ -179,6 +181,9 @@
 }
 
 .form__radio-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   padding-top: 39px;
   border-top: solid 2px #63D1BB;
 
@@ -279,8 +284,16 @@
   border: solid 2px #444444;
   cursor: pointer;
 
+  &:active {
+    border: solid 2px #444444;
+  }
+
   &:hover {
     border: solid 2px #62D1BA;
+  }
+
+  &:focus {
+    border: solid 2px #000000;
   }
 
   @media (min-width: @tablet-width) {
@@ -309,6 +322,9 @@
 }
 
 .form__checkbox-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   padding-top: 32px;
   border-top: solid 2px #63D1BB;
 
@@ -412,6 +428,9 @@
 }
 
 .form__name-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   padding-top: 36px;
   border-top: solid 2px #63D1BB;
 
@@ -430,6 +449,7 @@
 
 .form__name-item {
   margin-top: 22px;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
@@ -467,6 +487,11 @@
   border: none;
   border-bottom: solid 2px #444444;
 
+  &:active {
+    color: 444444;
+    opacity: 1;
+  }
+
   &:hover {
     border-bottom: solid 2px #62D1BA;
   }
@@ -489,7 +514,14 @@
 }
 
 .form__name-input[type="text"]::placeholder {
+  font-family: "Open Sans", sans-serif;
+  margin: 20px;
   opacity: 0.4;
+
+  &:active {
+    color: 444444;
+    opacity: 1;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 18px;
@@ -520,7 +552,7 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    margin-top: 33px;
+    margin-top: 34px;
     padding-left: 217px;
     padding-right: 50px;
   }
@@ -578,6 +610,11 @@
   border-bottom: solid 2px #444444;
   text-transform: uppercase;
 
+  &:active {
+    color: 444444;
+    opacity: 1;
+  }
+
   &:hover {
     border-bottom: solid 2px #62D1BA;
   }
@@ -606,8 +643,14 @@
 }
 
 .form__tel-input[type="tel"]::placeholder {
-  opacity: 0.4;
   padding-right: 17px;
+  font-family: "Open Sans", sans-serif;
+  opacity: 0.4;
+
+  &:active {
+    color: 444444;
+    opacity: 1;
+  }
 
   @media (min-width: @tablet-width) {
     padding-left: 17px;
@@ -696,6 +739,11 @@
   border-top: solid 2px #63D1BB;
   border-bottom: solid 2px #444444;
 
+  &:active {
+    color: 444444;
+    opacity: 1;
+  }
+
   &:hover {
     border-bottom: solid 2px #62D1BA;
   }
@@ -724,8 +772,14 @@
 }
 
 .form__mail-input[type="email"]::placeholder {
-  opacity: 0.4;
   padding-right: 17px;
+  font-family: "Open Sans", sans-serif;
+  opacity: 0.4;
+
+  &:active {
+    color: 444444;
+    opacity: 1;
+  }
 
   @media (min-width: @tablet-width) {
     padding-left: 17px;
@@ -735,14 +789,13 @@
 //description
 .form__description {
   margin: 0 30px;
-  margin-top: 42px;
+  margin-top: 41px;
   padding: 0;
   border: none;
   border-top: solid 2px #63D1BB;
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 0;
     border: none;
   }
 
@@ -758,7 +811,7 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    margin-top: 50px;
+    margin-top: 49px;
     margin-bottom: 53px;
     padding-left: 217px;
     padding-right: 50px;
@@ -807,13 +860,18 @@
 .form__description-text {
   width: 100%;
   max-width: 700px;
-  padding: 0;
-  min-height: 138px;
+  min-height: 103px;
   margin-top: 29px;
+  padding: 17px;
   font-size: 17px;
   line-height: 18px;
   color: #000000;
   border: solid 2px #444444;
+
+  &:active {
+    color: 444444;
+    opacity: 1;
+  }
 
   &:hover {
     border: solid 2px #62D1BA;
@@ -827,19 +885,24 @@
 
   @media (min-width: @tablet-width) {
     max-width: 1149px;
+    min-height: 105px;
     margin: 0;
-    padding: 0;
     font-size: 19px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 696px;
+    max-width: 662px;
   }
 }
 
 .form__description-text::placeholder {
-  padding: 17px;
+  font-family: "Open Sans";
   opacity: 0.4;
+
+  &:active {
+    color: 444444;
+    opacity: 1;
+  }
 }
 
 
@@ -849,6 +912,7 @@
     align-items: baseline;
     padding: 0 50px;
     padding-bottom: 50px;
+    font-family: "Open Sans", sans-serif;
     justify-content: space-between;
 
     @media (min-width: @desktop-width) {
@@ -880,10 +944,11 @@
 .form__button {
   display: block;
   margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 57px;
+  margin-top: 31px;
+  margin-bottom: 58px;
   padding: 18px 45px;
   padding-bottom: 14px;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
@@ -892,9 +957,20 @@
   text-transform: uppercase;
   background-color: transparent;
 
+  &:active {
+    border: solid 2px #444444;
+  }
+
   &:hover {
     color: #ffffff;
     background-color: #444444;
+    border: none;
+  }
+
+  &:focus {
+    color: rgb(255 255 255 / 30%);
+    background-color: #444444;
+    border: none;
   }
 
   @media (min-width: @tablet-width) {

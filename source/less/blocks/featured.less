@@ -133,6 +133,9 @@
 }
 
 .featured__container-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   margin-top: 20px;
   margin-bottom: 30px;
 
@@ -214,6 +217,7 @@
   padding: 0;
   padding-top: 15.5px;
   padding-bottom: 13px;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
@@ -222,9 +226,19 @@
   background-color: transparent;
   border: solid 2px #444444;
   z-index: 10;
+  cursor: pointer;
+
+  &:active {
+    border: solid 2px #444444;
+  }
 
   &:hover {
     color: #ffffff;
+    background-color: #444444;
+  }
+
+  &:focus {
+    color: rgb(255 255 255 / 30%);
     background-color: #444444;
   }
 

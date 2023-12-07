@@ -72,7 +72,7 @@ const createWebp = () => {
 const svg = () => {
   return gulp.src(['source/img/svg/*.svg', '!source/img/svg/icons/*.svg'])
     .pipe(svgo())
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('build/img/svg'));
 }
 
 const sprite = () => {
