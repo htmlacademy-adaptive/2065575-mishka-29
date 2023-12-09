@@ -167,6 +167,10 @@
   border-radius: 100%;
   background-color: #63D1BB;
 
+  &:focus {
+    border: solid 2px #000000;
+  }
+
   @media (min-width: @tablet-width) {
     width: 20px;
     height: 20px;
@@ -257,6 +261,7 @@
   top: -8px;
   left: -2px;
   padding-right: 15px;
+  font-family: "Open Sans", Arial, sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
@@ -312,6 +317,10 @@
   background-image: url(../img/svg/tick.svg);
   background-repeat: no-repeat;
   background-size: cover;
+
+  &:focus {
+    border: solid 2px #000000;
+  }
 
   @media (min-width: @tablet-width) {
     width: 33px;
@@ -449,7 +458,7 @@
 
 .form__name-item {
   margin-top: 22px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
@@ -514,8 +523,11 @@
 }
 
 .form__name-input[type="text"]::placeholder {
-  font-family: "Open Sans", sans-serif;
   margin: 20px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
   opacity: 0.4;
 
   &:active {
@@ -525,6 +537,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 18px;
+    font-size: 19px;
   }
 }
 
@@ -644,7 +657,10 @@
 
 .form__tel-input[type="tel"]::placeholder {
   padding-right: 17px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
   opacity: 0.4;
 
   &:active {
@@ -654,6 +670,7 @@
 
   @media (min-width: @tablet-width) {
     padding-left: 17px;
+    font-size: 19px;
   }
 }
 
@@ -773,7 +790,10 @@
 
 .form__mail-input[type="email"]::placeholder {
   padding-right: 17px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
   opacity: 0.4;
 
   &:active {
@@ -783,13 +803,14 @@
 
   @media (min-width: @tablet-width) {
     padding-left: 17px;
+    font-size: 19px;
   }
 }
 
 //description
 .form__description {
   margin: 0 30px;
-  margin-top: 41px;
+  margin-top: 43px;
   padding: 0;
   border: none;
   border-top: solid 2px #63D1BB;
@@ -896,12 +917,19 @@
 }
 
 .form__description-text::placeholder {
-  font-family: "Open Sans";
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
   opacity: 0.4;
 
   &:active {
     color: 444444;
     opacity: 1;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
   }
 }
 
@@ -912,7 +940,7 @@
     align-items: baseline;
     padding: 0 50px;
     padding-bottom: 50px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     justify-content: space-between;
 
     @media (min-width: @desktop-width) {
@@ -948,7 +976,7 @@
   margin-bottom: 58px;
   padding: 18px 45px;
   padding-bottom: 14px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;

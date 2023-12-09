@@ -268,7 +268,7 @@
   margin-top: 58px;
   padding: 0;
   font-weight: 700;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 25px;
   line-height: 30px;
   color: #000000;
@@ -312,6 +312,22 @@
 @media (min-width: @tablet-width) {
   .about__slider-text-transfer {
     display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .about__slider-text-transfer2 {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .about__slider-text-transfer3 {
+    display: none;
   }
 }
 
@@ -352,7 +368,7 @@
 }
 
 .about__slider-link-email {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 17px;
   line-height: 30px;
@@ -386,7 +402,7 @@
   margin-right: 4px;
   padding-top: 13px;
   padding-bottom: 9px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   background-color: transparent;
   border: solid 1px #ECECEC;
   z-index: 10;
@@ -414,7 +430,7 @@
 .about__slider-link-button {
   display: block;
   padding: 14px 65px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
