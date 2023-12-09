@@ -1,15 +1,3 @@
-.overlay { 
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
-  z-index: 20;
-}
-
-.overlay--modal {
-  display: none;
-}
-
 .modal {
   width: 100%;
   position: fixed;
@@ -66,19 +54,25 @@
 
 .modal__list {
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   margin-top: 21.5px;
   gap: 7px;
   justify-content: center;
 }
 
 .modal__button {
-  display: inline-block;
+  display: flex;
   width: 82px;
   height: 52px;
+  font-family: "Open Sans", Arial, sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
   color: #000000;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
   background: none;
   border: solid 2px #44444433;
@@ -94,6 +88,7 @@
   padding: 18.5px 82px;
   margin-top: 29px;
   margin-bottom: 46px;
+  font-family: "Open Sans", Arial, sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
@@ -103,11 +98,44 @@
   border: none;
   cursor: pointer;
 
+  &:active {
+    opacity: 60%;
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 18px 128px;
   }
 }
 
-.modal--active {
-  border: solid 2px #63D1BB;
+.modal__active {
+  position: relative;
 }
+
+.overlay__radio-input[type="radio"]:checked + .modal__active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 84px;
+  height: 52px;
+  left: -44px;
+  top: 0;
+  border: solid 2px #63d1bb;
+
+  &:active {
+    border: solid 2px #62D1BA;
+  }
+
+  &:hover {
+    border: solid 2px #444444;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 112px;
+    left: -59px;
+  }
+}
+

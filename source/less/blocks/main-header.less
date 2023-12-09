@@ -1,7 +1,7 @@
 .main-header {
   background-image: url('../img/jpg/hero-mobile@2x-1.jpg');
   background-repeat: no-repeat;
-  background-position-y: -19px;
+  background-position-y: -20px;
   background-size: 100%;
   background-color: #f9f9f9;
 
@@ -20,6 +20,7 @@
 
   @media (min-width: @desktop-width) {
     margin: 0 auto;
+    background-position-y: -1px;
     background-image: url('../img/jpg/hero-desktop-1.jpg');
 
     @media (min-resolution: 2dppx) {
@@ -39,19 +40,22 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    padding-top: 154px;
+    padding-top: 153px;
     font-size: 43px;
     line-height: 50px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 156px;
+    padding-top: 157px;
     font-size: 53px;
     line-height: 57px;
   }
 }
 
 .main-header__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   margin-top: 120px;
   font-weight: 700;
   font-size: 19px;
@@ -83,29 +87,53 @@
   background-color: #63D1BB;
   cursor: pointer;
 
+  &:active {
+    min-height: 103px;
+  }
+
   &:hover {
     min-height: 108px;
     margin-top: -5px;
   }
 
+  &:focus {
+    min-height: 103px;
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 120px;
 
+    &:active {
+      min-height: 120px;
+    }
+
     &:hover {
       min-height: 124px;
+    }
+
+    &:focus {
+      min-height: 120px;
     }
   }
 
   @media (min-width: @desktop-width) {
     min-height: 117px;
 
+    &:active {
+      min-height: 117px;
+    }
+
     &:hover {
       min-height: 121px;
+    }
+
+    &:focus {
+      min-height: 117px;
     }
   }
 }
 
-.main-header--color {
+.main-header__item--color {
   background-color: #56C3B2;
 }
 
@@ -114,6 +142,9 @@
   padding-left: 30px;
   padding-top: 24px;
   padding-bottom: 31px;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #FFFFFF;
+  text-decoration: none;
 
   @media (min-width: @tablet-width) {
     padding-left: 36px;
@@ -123,17 +154,12 @@
   }
 }
 
-.main-header--interior {
+.main-header__text--interior {
   padding-right: 105.5px;
-  background-image: url(../img/png/interior.svg.png);
+  background-image: url(../img/svg/interior.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-position-x: 87%;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url('../img/png/interior.svg@2x.png');
-    background-size: auto 62px;
-  }
 
   @media (min-width: @desktop-width) {
     padding: 0;
@@ -144,17 +170,12 @@
   }
 }
 
-.main-header--toys {
+.main-header__text--toys {
   padding-right: 143.5px;
-  background-image: url('../img/png/toy-svg.png');
+  background-image: url('../img/svg/toy.svg');
   background-repeat: no-repeat;
   background-position: center right;
   background-position-x: 90%;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url('../img/png/toy-svg@2x.png');
-    background-size: auto 60px;
-  }
 
   @media (min-width: @tablet-width) {
     padding-right: 146px;
@@ -167,6 +188,35 @@
     padding-left: 35px;
     padding-bottom: 7px;
     background-position-x: 93%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-header__page {
+    position: relative;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-header__page::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 55px;
+    bottom: -9px;
+    left: 0;
+    background-image: url(../img/svg/zigzag-fill-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
+    background-size: 100%;
+    z-index: 10;
+
+    @media (min-width: @desktop-width) {
+      bottom: -19px;
+      background-image: url(../img/svg/zigzag-fill-desktop-2.svg);
+    }
   }
 }
 

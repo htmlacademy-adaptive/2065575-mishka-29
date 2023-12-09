@@ -24,28 +24,6 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .featured__decor {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: -15px;
-    left: 0;
-    background-image: url(../img/svg/zigzag-fill-desktop.svg.svg);
-    background-repeat: no-repeat;
-    background-position-y: top;
-    background-position-x: center;
-    background-size: 100%;
-    z-index: 10;
-
-    @media (min-width: @desktop-width) {
-      background-image: url(../img/svg/zigzag-fill-desktop-2.svg.svg);
-    }
-  }
-}
-
-
 .featured__title {
   margin: 0;
   padding: 0;
@@ -155,6 +133,9 @@
 }
 
 .featured__container-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   margin-top: 20px;
   margin-bottom: 30px;
 
@@ -236,6 +217,7 @@
   padding: 0;
   padding-top: 15.5px;
   padding-bottom: 13px;
+  font-family: "Open Sans", Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
@@ -244,9 +226,19 @@
   background-color: transparent;
   border: solid 2px #444444;
   z-index: 10;
+  cursor: pointer;
+
+  &:active {
+    border: solid 2px #444444;
+  }
 
   &:hover {
     color: #ffffff;
+    background-color: #444444;
+  }
+
+  &:focus {
+    color: rgb(255 255 255 / 30%);
     background-color: #444444;
   }
 
