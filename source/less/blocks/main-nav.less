@@ -95,7 +95,7 @@
   position: absolute;
   top: 25px;
   right: 26px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   background: none;
   cursor: pointer;
   border: none;
@@ -188,7 +188,7 @@
     z-index: 20;
     
     @media (min-width: @desktop-width) {
-      top: 6px;
+      top: 4px;
       gap: 40px;
     } 
   }
@@ -242,6 +242,32 @@
   }
 }
 
+.main-nav__link--search-item {
+  margin: 0;
+  width: 70%;
+  padding-top: 27px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: #000000;
+
+  @media (min-width: @tablet-width) {
+    margin: auto;
+    padding: 0;
+  }
+}
+
+.main-nav__link--text {
+  margin: 0;
+  width: 70%;
+  padding-top: 27px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .main-nav__list {
   margin: 0;
   padding: 0;
@@ -277,10 +303,15 @@
 }
 
 .main-nav__search {
-  display: flex;
-  padding: 30px 29px;
-  font-family: "Open Sans", Arial, sans-serif;
-  align-self: center;
+  display: inline-flex;
+  width: 100%;
+  margin: auto 0;
+  padding: 0;
+  color: rgba(0,0,0,.2);
+  background-color: transparent;
+  text-align: left;
+  text-decoration: none;
+  border: 0;
   cursor: pointer;
 
   &:active {
@@ -302,10 +333,11 @@
   padding-top: 26.5px;
 }
 
-.main-nav__search--search-images {
+.main-nav__search-images {
   background-color: transparent;
   border: none;
   padding: 30px 27.5px;
+  color: rgb(0 0 0 / 20%);
   cursor: pointer;
 
   &:active {
@@ -332,41 +364,6 @@
     padding: 30px 33px;
     border-left: solid 1px #00000011;
     border-right: solid 1px #00000011;
-  }
-}
-
-.main-nav__link--search-item {
-  margin: 0;
-  width: 70%;
-  padding-top: 27.5px;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
-  color: #000000;
-  
-  &:active {
-    opacity: 100%;
-  }
-
-  &:hover {
-    opacity: 60%;
-  }
-
-  &:focus {
-    opacity: 30%;
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 100%;
-    margin: auto;
-    padding: 0;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .main-nav__search-text {
-    display: none;
   }
 }
 
