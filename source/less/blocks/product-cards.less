@@ -19,7 +19,7 @@
   font-size: 27px;
   line-height: 30px;
   color: #000000;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
 
   @media (min-width: @tablet-width) {
     padding-top: 100px;
@@ -45,7 +45,7 @@
     height: 100%;
     bottom: -1px;
     left: 0;
-    background-image: url('../img/svg/zigzag-fill-desktop.svg');
+    background-image: url("../img/svg/zigzag-fill-desktop.svg");
     background-repeat: no-repeat;
     background-position-y: bottom;
     background-position-x: center;
@@ -61,7 +61,6 @@
 .product-cards__list {
   max-width: 1050px;
   margin: 0;
-  padding: 0;
   list-style: none;
   padding: 30px;
   padding-top: 30px;
@@ -85,11 +84,11 @@
 
 .product-cards__item {
   margin-top: 29px;
-  border: solid 1px #ECECEC;
-  
+  border: solid 1px #ececec;
+
   &:hover,
   &:focus {
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
   }
 
   &:nth-child(1) {
@@ -110,7 +109,6 @@
 }
 
 .product-cards__link img {
-  display: flex;
   display: block;
   width: 100%;
   object-fit: cover;
@@ -129,9 +127,9 @@
 
 .product-cards__container {
   width: 100%;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   text-decoration: none;
-  
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -220,7 +218,7 @@
   color: #000000;
   align-items: center;
   justify-content: space-between;
-  border-top: solid 1px #ECECEC;
+  border-top: solid 1px #ececec;
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
@@ -245,22 +243,21 @@
 
 .product-cards__basket-images {
   padding-bottom: 3px;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   background-color: transparent;
   border: none;
   cursor: pointer;
 
   &:active {
-    color: #000000;
+    fill: #000000;
   }
 
   &:hover {
-    color: #63D1BB;
+    fill: #63d1bb;
   }
 
   &:focus {
-    color: #63D1BB;
+    fill: #63d1bb;
     opacity: 30%;
   }
 }
-
